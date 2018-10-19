@@ -3,28 +3,31 @@ public class StringManipulator
 {
 	public String noVowels (String str)
 	{
+		String someString = "";
 		for(int i = 0; i < str.length(); i++)
 		{
 			char letter = str.charAt(i);
 			if (letter == 'A' || letter == 'a' || letter == 'E' || letter == 'e' || letter == 'I' || 
 				letter == 'i' || letter == 'O' || letter == 'o' || letter == 'U' || letter == 'u')
 			{
-				return "*";
+				someString += "*";
 			}
 			else 
 			{
-				String emptyString = " ";
-				emptyString += letter;
-				return letter;
+				someString += letter;
 			}
 		}
+		return someString;
 	}
 	
 	public String reverse (String str)
 	{
-		for (int i = 0; i < str.length(); i++)
+		String someString = "";
+		for (int i = str.length()-1; i >= 0; i--)
 		{
-			return str.substring(str.length()-1);
+			char letter = str.charAt(i);
+			someString += letter;
 		}
+		return someString;
 	}
 }
